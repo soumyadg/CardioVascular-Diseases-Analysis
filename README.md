@@ -2,17 +2,17 @@
 1. Introduction
 2. MATERIALS AND METHODS
    
-   A. Data Collection
-   B. Data Preprocessing
-   C. Model Selection
-   D. Model Training and Testing
-   E. Machine Learning Models
-   F. Evaluation of F1 Scores
-   G. Hyperparameter Tuning
-   H. Identification of Impactful Personal Attributes
-   I. Evaluation of Model Performance
-   J. Assessment of Discrimination Ability
-   K. Model Evaluation
+   - Data Collection
+   - Data Preprocessing
+   - Model Selection
+   - Model Training and Testing
+   - Machine Learning Models
+   - Evaluation of F1 Scores
+   - Hyperparameter Tuning
+   - Identification of Impactful Personal Attributes
+   - Evaluation of Model Performance
+   - Assessment of Discrimination Ability
+   - Model Evaluation
    
 4. RESULTS AND DISCUSSION
 5. Conclusion
