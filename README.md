@@ -1,6 +1,7 @@
 ## Table of Contents
 1. Introduction
 2. MATERIALS AND METHODS
+   
    A. Data Collection
    B. Data Preprocessing
    C. Model Selection
@@ -12,8 +13,9 @@
    I. Evaluation of Model Performance
    J. Assessment of Discrimination Ability
    K. Model Evaluation
-3. RESULTS AND DISCUSSION
-4. Conclusion
+   
+4. RESULTS AND DISCUSSION
+5. Conclusion
    - Implications
    - Recommendations
 
