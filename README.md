@@ -1,59 +1,79 @@
-Cardiovascular Disease Risk Prediction using Machine Learning Algorithms
-This documentation provides an overview of a study conducted to predict the risk of developing cardiovascular diseases (CVD) using personal lifestyle factors and machine learning algorithms. The study explores various ML models, hyperparameter tuning, and influential personal attributes for CVD risk prediction. The goal is to enhance early detection and prevention of CVDs by leveraging the power of data analysis and ML techniques.
+## Table of Contents
+1. Introduction
+2. MATERIALS AND METHODS
+   A. Data Collection
+   B. Data Preprocessing
+   C. Model Selection
+   D. Model Training and Testing
+   E. Machine Learning Models
+   F. Evaluation of F1 Scores
+   G. Hyperparameter Tuning
+   H. Identification of Impactful Personal Attributes
+   I. Evaluation of Model Performance
+   J. Assessment of Discrimination Ability
+   K. Model Evaluation
+3. RESULTS AND DISCUSSION
+4. Conclusion
+   - Implications
+   - Recommendations
 
-Table of Contents
-Introduction
-Conclusion
-Implications
-Recommendations
-Introduction <a name="introduction"></a>
-Cardiovascular diseases (CVDs) continue to be a leading cause of death globally. Early detection and prevention play a crucial role in reducing the burden of CVDs. The study focuses on utilizing machine learning algorithms to predict the risk of developing CVDs based on personal lifestyle factors. The dataset used in the study consists of 438,693 records obtained from the Behavioral Risk Factor Surveillance System (BRFSS) in 2021, provided by the World Health Organization (WHO).
+## Introduction
 
-The study addresses the challenge of class imbalance in the dataset by using sampling techniques to balance the data. Performance evaluation of ML models is conducted using 10-Stratified Fold cross-validation testing, and the best-performing model is identified as Logistic Regression (LR) with an F1 score of 0.32564. Hyperparameter tuning is applied to the LR model, resulting in a better F1 score of 0.3257 with C=0.1. Feature importance analysis reveals that sex, diabetes, and general health are the most influential factors for CVD risk prediction.
+The introduction section provides an overview of the study, including the background, research objectives, and significance of the research topic.
 
-The LR model is evaluated on the testing data, achieving an F1 score of 0.33. The Confusion Matrix is used to visualize the model's performance, demonstrating its ability to correctly classify 79.18% of people with CVDs and 73.46% of healthy individuals. Additionally, the LR model achieves an AUC score of 0.837, indicating its effectiveness in distinguishing between classes.
+## MATERIALS AND METHODS
 
-The study highlights the applicability of the Logistic Regression model in the medical field for CVD risk prediction. It also suggests the incorporation of medical attributes to further improve the model's performance. Overall, the study provides valuable insights into predicting CVD risk based on personal attributes.
+### A. Data Collection
 
-Conclusion <a name="conclusion"></a>
-The study concludes that the Logistic Regression (LR) model outperforms other machine learning models in predicting CVD risk based on personal lifestyle factors. It achieves the highest mean F1 score among the evaluated models. The LR model is fine-tuned using hyperparameter tuning techniques, resulting in improved predictive performance. The evaluation on the test data demonstrates the model's consistency and reliability.
+The data collection procedure for this study involved utilizing the annual BRFSS data in 2021 obtained from the Center for Disease Control (CDC). The dataset consisted of 438,693 records with 304 attributes, from which a specific subset of 19 attributes was chosen for analysis and model development.
 
-Feature importance analysis reveals that sex, diabetes, and general health have significant impacts on CVD risk prediction according to the LR model. The model shows high accuracy in classifying individuals with CVDs and healthy individuals, and its AUC score confirms its effectiveness in distinguishing between the two classes.
+### B. Data Preprocessing
 
-The findings of the study have practical implications for healthcare professionals, researchers, and policymakers. The LR model can be incorporated into clinical practice for early detection and personalized interventions. The identified influential personal attributes can guide the development of targeted intervention strategies. The study enriches the existing knowledge on CVD risk prediction and contributes to improved patient outcomes and reduced CVD-related morbidity and mortality.
+The data preprocessing step involved tasks such as data cleaning, normalization, feature selection, and feature engineering to ensure the data's quality and suitability for machine learning algorithms.
 
-Implications <a name="implications"></a>
-The study's implications are as follows:
+### C. Model Selection
 
-The Logistic Regression model demonstrates superior performance in predicting CVD risk compared to other machine learning models. Healthcare professionals and researchers can utilize this model for effective CVD risk prediction based on personal lifestyle factors.
+The appropriate machine learning algorithm(s) were selected based on the data characteristics and research question being addressed.
 
-The comprehensive evaluation and comparison of different machine learning models provide insights into the most suitable models for CVD risk prediction. This information aids in selecting the appropriate model for specific tasks.
+### D. Model Training and Testing
 
-The study highlights the importance of model evaluation and the impact of hyperparameter tuning. It emphasizes the need for caution when interpreting model results and the value of cross-validation techniques for assessing generalization ability.
+The data was divided into training and testing sets using an 80:20 ratio. The selected machine learning algorithm(s) were trained on the training set and evaluated on the testing set to assess their performance.
 
-The identified influential personal attributes, such as sex, diabetes, and general health, offer valuable insights for healthcare professionals. These attributes can inform targeted interventions and personalized preventive measures for individuals at risk of developing CVDs.
+### E. Machine Learning Models
 
-The Logistic Regression model demonstrates high accuracy in classifying individuals with CVDs and healthy individuals. Sensitivity, specificity, and AUC values further validate its predictive capabilities. This enables effective risk identification and personalized interventions.
+Several machine learning models, including Logistic Regression, K-Nearest Neighbor, Naive Bayes, Decision Tree Classifier, and Random Forest, were employed based on their appropriateness for classification tasks and ability to handle different types of variables.
 
-The study showcases the potential of machine learning and electronic health records in analyzing large datasets for identifying CVD risk factors. It emphasizes the importance of data-driven approaches in healthcare research and decision-making.
+### F. Evaluation of F1 Scores
 
-Recommendations <a name="recommendations"></a>
-Based on the study findings, the following recommendations are made:
+The models' performance was evaluated using F1 scores, a metric combining precision and recall, through 10-fold cross-validation. The mean F1 score for each model was calculated to represent its overall performance.
 
-Incorporate machine learning models, specifically the Logistic Regression model, into clinical practice for CVD risk prediction based on personal lifestyle factors. This facilitates early detection, prevention, and personalized treatment strategies.
+### G. Hyperparameter Tuning
 
-Validate the Logistic Regression model on diverse datasets to ensure its generalizability and robustness. Evaluating its performance on different populations and healthcare settings enhances its applicability.
+Hyperparameter tuning was performed to improve the model's performance. The regularization parameter C was tuned using GridSearchCV to identify the optimal setting.
 
-Explore additional personal attributes and data sources to improve CVD risk prediction. Investigate variables like age, BMI, smoking status, and genetic markers. Integrate data from wearable devices and genetic databases for richer information.
+### H. Identification of Impactful Personal Attributes
 
-Continuously refine and update the predictive model to incorporate advancements in machine learning. Regularly reassess the model's performance, incorporate new features or algorithms, and enhance its accuracy and predictive power.
+The coefficients of the model with the best F1 score were analyzed to determine the personal attributes that significantly influenced the risk prediction of cardiovascular diseases (CVDs).
 
-Conduct prospective studies to assess the real-world impact of the Logistic Regression model in clinical practice. Evaluate its effectiveness, address challenges or limitations, and ensure seamless integration into healthcare workflows.
+### I. Evaluation of Model Performance
 
-Collaborate with stakeholders, including researchers, healthcare providers, policymakers, and technology experts, to implement the predictive model effectively. Develop guidelines, protocols, and decision support systems that leverage the model for improved patient outcomes and preventive measures.
+The performance of the model with the best F1 score was assessed using a confusion matrix to calculate metrics such as sensitivity and specificity.
 
-Promote awareness and education on CVD risk factors, emphasizing attributes such as sex, diabetes, and general health. Launch educational campaigns, interventions, and lifestyle modification programs to empower individuals in mitigating their CVD risk.
+### J. Assessment of Discrimination Ability
 
-Prioritize data privacy and ethical considerations when working with personal health data. Safeguard patient confidentiality, obtain informed consent, and implement robust data governance practices to ensure ethical use of data in CVD risk prediction.
+The model's ability to distinguish between healthy individuals and those at risk for CVDs was evaluated using the area under the curve (AUC) of the receiver operating characteristics (ROC) curve.
 
-By implementing these recommendations, healthcare systems, and practitioners can leverage machine learning to enhance CVD risk prediction, improve patient care, and reduce the burden of cardiovascular diseases.
+### K. Model Evaluation
+
+The final step involved evaluating the performance of the machine learning algorithm(s) using various statistical tools, including accuracy, precision, recall, F1-score, ROC curve, and AUC.
+
+## RESULTS AND DISCUSSION
+
+This section presents the results of the study and provides a comprehensive discussion and analysis of the findings.
+
+## Conclusion
+
+The conclusion section summarizes the key findings of the study and presents implications and recommendations based on the research outcomes.
+
+- Implications: This subsection discusses the implications of the study's findings and their potential impact on the field or relevant stakeholders.
+
